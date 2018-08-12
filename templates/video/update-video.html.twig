@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	{% for video in videos %}
+        <h2>{{ video.title }}</h2>
+        <p>{{ video.url }}</p>
+		<a href="{{ path('update_video', {'id': video.id}) }}" >Modifier</a>
+    {% endfor %}
+{% endblock %}
